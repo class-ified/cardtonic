@@ -1,0 +1,40 @@
+.navigation {
+    width: 100vw;
+    height: 15%;
+    min-height: 7rem;
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    &__content {
+        width: 82%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-logo {
+            height: 100%;
+
+            a {
+                height: 100%;
+                img {
+                    height: 100%;
+                    max-height: 6rem;
+                }
+            }
+        }
+
+        &-links {
+
+            & > *:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            a {
+                display: inline-block;
+            }
+        }
+    }
+}

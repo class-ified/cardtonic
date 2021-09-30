@@ -1,0 +1,15 @@
+.container-home {
+    width: 100vw;
+
+    .section {
+        width: 100%;
+        background-color: blue;
+
+        &-content {
+            width: var(--section-content-width);
+            // height: 4px;    
+            background-color: red;
+            margin: 0 auto;
+        }
+    }
+}
