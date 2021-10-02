@@ -1,5 +1,7 @@
 import logoImage from "../assets/images/logo.svg";
 
+import { RegisterButton } from "./Button";
+
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
@@ -27,11 +29,7 @@ const Navigation = () => {
 						<h3 className="text-small text-regular">Sign In</h3>
 					</Link>
 
-					<Link to="/dashboard/register">
-						<h3 className="text-small text-vbold button-yellow">
-							Register
-						</h3>
-					</Link>
+					<RegisterButton buttonColor='button-yellow' text='Register' />
 				</div>
 			</div>
 		</header>

@@ -1,61 +1,65 @@
 .footer {
-    width: 100vw;
-    padding: 5% 0;
-    background-color: $color-black;
+	width: 100vw;
+	padding: 5% 0;
+	background-color: $color-black;
 
-    &__content {
-        width: var(--section-content-width);
-        margin: 0 auto;
+	&__content {
+		width: var(--section-content-width);
+		margin: 0 auto;
 
-        &-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 5rem;
+		&-top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 5rem;
 
-            .text-box {
-                width: 35%;
-                a {
-                    display: block;
-                    margin-bottom: 2.5rem;
-                    img {
-                        height: 6rem;
-                    }
-                }
-            }
+			.text-box {
+				width: 35%;
+				a {
+					display: block;
+					margin-bottom: 2.5rem;
+					img {
+						height: 6rem;
+					}
+				}
+			}
 
-            &-span {
-                @include breakpoint(desktop) {
-                    display: none !important;
-                }
-            }
+			&-span {
+				background-color: #333333;
 
-            .links-box {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
+				@include breakpoint(desktop) {
+					display: none !important;
+				}
+			}
 
-                .social-media {
-                    margin-bottom: 1rem;
-                }
+			.links-box {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
 
-                .page-links {
-                    display: flex;
+				.social-media {
+					margin-bottom: 1rem;
+				}
 
-                    & > *:not(:last-child) {
-                        margin-right: 4em;
-                    }
+				.page-links {
+					display: flex;
 
-                }
-            }
-        }
+					& > *:not(:last-child) {
+						margin-right: 4em;
+					}
+				}
+			}
+		}
 
-        &-bottom {
+		&-midline {
+			background-color: $color-grey-dark;
+		}
 
-            h3 {
-                margin-top: 2.5rem;
-                text-align: center;
-            }
-        }
-    }
+		&-bottom {
+			h3 {
+				margin-top: 2.5rem;
+				text-align: center;
+			}
+		}
+	}
 }

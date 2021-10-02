@@ -1,5 +1,21 @@
-.button-yellow {
-    padding: 1em 2.8em;
-    background-color:#FFEACA;
+.button-register {
+    height: 5rem;
+    width: 16rem;
     border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.button-yellow {
+    background-color:#FFEACA;
+    color: $color-blue-dark;
+}
+
+.button-grey {
+    color: $color-blue-dark;
+    background-color: #F0F0F0;
+}
+
+

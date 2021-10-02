@@ -10,6 +10,8 @@ import Register from "./pages/dashboard/Register"
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+// import { Swiper, SwiperSlide } from "swiper/react";
+
 function App() {
 	return (
 		<div className="app">

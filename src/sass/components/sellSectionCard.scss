@@ -1,0 +1,87 @@
+.card {
+    --size: 20rem;
+    --border-radius: 2rem;
+    min-height: var(--size);
+    width: var(--size);
+    background-color: $color-white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: background-color 1s ease-out;
+
+    &::before,
+    &::after {
+        --size: 12rem;  
+        position: absolute;
+        content: '';
+        height: var(--size);
+        width: var(--size);
+        background: linear-gradient(137.76deg, #FFFFFF 18.03%, rgba(255, 255, 255, 0) 92.51%);
+        opacity: 0.1;
+        // background-color: blue;
+        border-radius: 50%;
+        z-index: -1;
+        
+    }
+
+    &::before {
+        top: 0;
+        right: 10%;
+        transform: translate(80%, -80%);
+        transition: transform .4s ease-out .2s;
+    }
+    &::after {
+        bottom: 0;
+        left: 15%;
+        transform: translate(-80%, 80%);
+        transition: transform .4s ease-out .1s;
+    }
+
+    &:hover {
+        background-color: $color-blue-dark;                        
+    }
+    &:hover::after {
+        transform: translate(-30%, 30%);
+    }
+    &:hover::before {
+        transform: translate(40%, -40%);
+    }
+
+    img {
+        margin-bottom: .8rem;
+    }
+    &-heading {
+        color: $color-blue-2;
+        margin-bottom: .5rem;
+        transition: color .5s ease-out;
+    }
+    &-text {
+        color: $color-grey;
+        opacity: .7;
+        transition: color .5s ease-out;
+    }
+
+    &:hover > .card {
+
+        &-heading {
+            color: $color-white;
+        }
+        &-text {
+            color: $color-white;
+        }
+    }
+
+
+    &-1 {
+        margin-bottom: 1.2rem;
+    }
+    &-2 {
+        margin-top: calc(var(--size)/2.8);
+    }
+    &-3 {
+        margin-top: var(--size);
+    }
+}
