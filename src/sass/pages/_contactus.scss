@@ -1,0 +1,98 @@
+.container-contactus {
+    width: 100%;
+
+    .content {
+        width: var(--section-content-width);
+        max-width: var(--section-content-maxwidth);
+        margin: 0 auto;
+        padding: 8% 0;
+
+        @include breakpoint(tablet) {
+            padding: 12% 0 6% 0;
+            width: 80%;
+        }
+
+        .page-header {
+            margin-bottom: 3%;
+
+            @include breakpoint(tablet-sm) {
+                margin-bottom: 3rem;
+            }
+            @include breakpoint(mobile-lg) {
+                margin-bottom: 4rem;
+            }
+        }
+        .page-details {
+            margin-bottom: 5%;
+            width: 80%;
+
+            h3 {
+
+                a {
+                    color: #038A54;
+                    font-weight: 900;
+                }
+            }
+        }
+
+        .contact-form {
+            
+            
+            .links {
+                display: flex;
+                justify-content: space-between;
+
+                @include breakpoint(tablet-sm) {
+                    flex-direction: column;
+                }
+
+                .buttons,
+                .social-media {
+                    margin-top: 1.5rem;
+                }
+
+                .buttons {
+
+                    .recaptcha-box {
+                        height: 7rem;
+                        width: 20rem;
+                        background-color: red;
+                        margin-bottom: 2rem;
+
+                        @include breakpoint(tablet-sm) {
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+
+                    @include breakpoint(tablet-sm) {
+                        margin-top: 2rem;
+                        margin-bottom: 5rem;
+                    }
+                }
+
+
+                .social-media {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    @include breakpoint(mobile-lg) {
+                        justify-content: space-between;
+
+                        svg {
+                            --size: 5rem;
+                            height: var(--size);
+                            width: var(--size);
+                        }
+                    }
+
+                    &>*:not(:last-child) {
+                        margin-right: .5rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.form {
+    width: 100%;
+
+    &-input,
+    &-select,
+    &-textarea {
+        margin-bottom: 1rem;
+    }
+
+    &-input {
+        width: 100%;
+        height: var(--input-height);
+        border-radius: var(--input-border-radius);
+        border: 1px solid $color-input-border;
+        padding: 2rem 4rem;
+        color: #00CEDE;
+        transition: all .3s ease-out;
+
+        @include breakpoint(tablet-sm) {
+            padding: 1.5rem 2.5rem;
+        }
+        
+        &:focus {
+            outline: none;
+            border: 1px solid $color-input-border-focus;
+            color: $color-blue;
+        }
+        &::placeholder {
+            color: inherit;
+        }
+    }
+    &-textarea {
+        height: 17rem;
+        font-family: inherit;
+        &::placeholder {
+            font-family: inherit;
+        }
+    }
+    &-select {
+
+    }
+}

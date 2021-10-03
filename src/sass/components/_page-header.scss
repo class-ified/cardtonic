@@ -1,0 +1,25 @@
+.page-header {
+    position: relative;
+
+    &::before {
+        display: block;
+        position: absolute;
+        content: url(../../assets/images/page-header-underline.svg);
+        bottom: -8px;
+        left: 0;
+
+        @include breakpoint(tablet-sm) {
+            content: url(../../assets/images/page-header-underline-mobile.svg);
+            bottom: -12px;
+        }
+
+        @include breakpoint(mobile-lg) {
+            bottom: -20px;
+        }
+    }
+
+    @include breakpoint(mobile-lg) {
+        width: 80%;
+    }
+    
+}

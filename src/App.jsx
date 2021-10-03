@@ -2,6 +2,7 @@
 import "./sass/main.scss";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer"
+import GetStartedNow from "./components/GetStartedNow";
 import Home from "./pages/Home"
 import RateCalculator from "./pages/RateCalculator";
 import ContactUs from "./pages/ContactUs";
@@ -39,6 +40,8 @@ function App() {
 						<Register/>
 					</Route>
 				</Switch>
+
+				<GetStartedNow />
 
 				<Footer />
 			</Router>

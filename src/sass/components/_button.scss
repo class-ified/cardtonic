@@ -8,6 +8,21 @@
     align-items: center;
 }
 
+.button-black {
+    height: var(--input-height);
+    width: 30rem;
+    background-color: $color-black;
+    border-radius: var(--input-border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+
+    @include breakpoint(mobile-lg) {
+        width: 100%;
+    }
+}
+
 .button-yellow {
     background-color:#FFEACA;
     color: $color-blue-dark;

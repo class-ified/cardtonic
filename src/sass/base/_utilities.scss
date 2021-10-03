@@ -41,6 +41,10 @@
 		$min_font_54,
 		$max_font_54
 	);
+
+	@include breakpoint(tablet-sm) {
+		font-size: 35px;
+	}
 }
 
 .text-regular {

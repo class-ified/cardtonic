@@ -1,13 +1,13 @@
 // Responsiveness
 @mixin breakpoint($point) {
-    @if $point == mobile {
-        @media only screen and (max-width: 768px) { @content;}
-    }
     @if $point == desktop {
         @media only screen and (min-width: 1200px) { @content;}
     }
-    @if $point == landing-mobile {
+    @if $point == tablet {
         @media only screen and (max-width: 1199px) {@content;}
+    }
+    @if $point == tablet-sm {
+        @media only screen and (max-width: 768px) { @content;}
     }
     @if $point == mobile-lg {
         @media only screen and (max-width: 425px) { @content;}

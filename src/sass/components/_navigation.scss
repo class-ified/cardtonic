@@ -7,6 +7,10 @@
     justify-content: center;
     align-items: flex-end;
 
+    @include breakpoint(tablet) {
+        height: 8rem;
+    }
+
     &__content {
         width: 82%;
         height: 50%;
@@ -14,14 +18,24 @@
         justify-content: space-between;
         align-items: center;
 
+        @include breakpoint(tablet) {
+            width: 87%;
+        }
+
         &-logo {
             height: 100%;
 
             a {
                 height: 100%;
+                display: flex;
+                align-items: center;
                 img {
                     height: 100%;
-                    max-height: 6rem;
+                    max-height: 5rem;
+
+                    @include breakpoint(tablet-sm) {
+                        max-height: 3.8rem;
+                    }
                 }
             }
         }
@@ -29,6 +43,10 @@
         &-links {
             display: flex;
             align-items: center;
+
+            @include breakpoint(tablet-sm) {
+                display: none;
+            }
 
             & > *:not(:last-child) {
                 margin-right: 2rem;

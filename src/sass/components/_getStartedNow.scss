@@ -1,0 +1,49 @@
+.container-getstarted {
+    background-color: #F8F8F8;
+    padding: 6% 0;
+
+    @include breakpoint(tablet-sm) {
+        padding: 9% 0;
+    }
+
+    .content {
+        width: var(--section-content-width);
+        margin: 0 auto;
+
+        .heading {
+            margin-bottom: 1.2rem;
+
+            h1 {
+                font-size: 30px;
+
+                @include breakpoint(tablet-sm) {
+                    font-size: 35px;
+                }
+            }
+        }
+
+        .details {
+            margin-bottom: 3.5rem;
+        }
+
+        .links-box {
+            display: flex;
+            justify-content: flex-end;
+
+            @include breakpoint(tablet-sm) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &>*:not(:last-child) {
+                margin-right: .5rem;
+
+                @include breakpoint(tablet-sm) {
+                    margin-right: 0;
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+}
