@@ -1,8 +1,20 @@
+:root {
+    --input-padding-vertical: 2rem;
+    --input-padding-horizontal: 4rem;
+}
+
+@include breakpoint(tablet-sm) {
+    :root {
+        --input-padding-vertical: 1.5rem;
+        --input-padding-horizontal: 2.5rem;
+    }
+}
+
 .form {
     width: 100%;
 
     &-input,
-    &-select,
+    &-select-box,
     &-textarea {
         margin-bottom: 1rem;
     }
@@ -12,13 +24,9 @@
         height: var(--input-height);
         border-radius: var(--input-border-radius);
         border: 1px solid $color-input-border;
-        padding: 2rem 4rem;
+        padding: var(--input-padding-vertical) var(--input-padding-horizontal);
         color: #00CEDE;
         transition: all .3s ease-out;
-
-        @include breakpoint(tablet-sm) {
-            padding: 1.5rem 2.5rem;
-        }
         
         &:focus {
             outline: none;
@@ -36,7 +44,28 @@
             font-family: inherit;
         }
     }
-    &-select {
+    &-select-box {
+        position: relative;
+        height: var(--input-height);
 
+        select {
+            height: 100%;
+
+            &:focus {
+                & ~ svg {
+                    path {
+                        stroke: #D9D9D9;
+                    }
+                }
+            }
+        }
+
+        svg {
+            position: absolute;
+            right: var(--input-padding-horizontal);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
     }
 }

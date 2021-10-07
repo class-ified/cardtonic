@@ -34,6 +34,15 @@
 	);
 }
 
+.text-kindabig {
+	@include fluid-type(
+		$min_width_30,
+		$max_width_30,
+		$min_font_30,
+		$max_font_30
+	);
+}
+
 .text-xl {
 	@include fluid-type(
 		$min_width_54,

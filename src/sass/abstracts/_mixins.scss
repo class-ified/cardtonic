@@ -19,3 +19,45 @@
         @media only screen and (max-width: 320px) { @content;}
     }
 }
+
+// content base styles for non-homepage pages 
+@mixin contentBaseStyles {
+    width: var(--section-content-width);
+    max-width: var(--section-content-maxwidth);
+    margin: 0 auto;
+    padding: 8% 0;
+
+    @include breakpoint(tablet) {
+        padding: 12% 0 6% 0;
+        width: 80%;
+    }
+    @include breakpoint(tablet-sm) {
+        padding: 12% 0 8% 0;
+    }
+    @include breakpoint(mobile-lg) {
+        padding: 12% 0 12% 0;
+    }
+
+    .page-header {
+        margin-bottom: 3%;
+
+        @include breakpoint(tablet-sm) {
+            margin-bottom: 3rem;
+        }
+        @include breakpoint(mobile-lg) {
+            margin-bottom: 4rem;
+        }
+    }
+    .page-details {
+        margin-bottom: 5%;
+        width: 80%;
+
+        h3 {
+
+            a {
+                color: #038A54;
+                font-weight: 900;
+            }
+        }
+    }
+}

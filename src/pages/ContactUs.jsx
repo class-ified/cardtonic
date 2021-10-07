@@ -19,22 +19,6 @@ const ContactUs = () => {
                     <textarea className="form-input form-textarea" name="message" id="message" placeholder="Type your message here in details..." style={{resize: 'none'}} required>
                     </textarea>
 
-                    {/* <select className="form-input form-select" name="category" id="category">
-                        <option value="">Select Category</option>
-                        <option value="idk">okay</option>
-                        <option value="idk">okay</option>
-                        <option value="idk">okay</option>
-                        <option value="idk">okay</option>
-                    </select>
-                    
-                    <select className="form-input form-select" name="subcategory" id="subcategory">
-                        <option value="">Select Sub-Category</option>
-                        <option value="idk">okay</option>
-                        <option value="idk">okay</option>
-                        <option value="idk">okay</option>
-                        <option value="idk">okay</option>
-                    </select> */}
-
                     <div className="links">
                         <div className="buttons">
                             <div className="recaptcha-box"></div>

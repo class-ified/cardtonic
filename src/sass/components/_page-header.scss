@@ -5,7 +5,7 @@
         display: block;
         position: absolute;
         content: url(../../assets/images/page-header-underline.svg);
-        bottom: -8px;
+        bottom: -12px;
         left: 0;
 
         @include breakpoint(tablet-sm) {

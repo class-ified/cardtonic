@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const RegisterButton = (props) => {
     return (
         <Link to='/dashboard/register'>
-            <h3 className={`text-small text-vbold button-register ${props.buttonColor}`}>
+            <h3 className={`text-small text-vbold button-small button-register ${props.buttonColor}`}>
                 {props.text}
             </h3>
         </Link>
@@ -23,4 +23,14 @@ const BlackButton = (props) => {
     )
 }
 
-export {RegisterButton, BlackButton}
+const JoinUsButton = (props) => {
+    return (
+        <a href="mailto:cardtonic@cardtonic.com" >
+            <h3 className={`text-small text-vbold button-small button-register ${props.buttonColor}`}>
+                {props.text}
+            </h3>
+        </a>
+    )
+}
+
+export {RegisterButton, BlackButton, JoinUsButton}
