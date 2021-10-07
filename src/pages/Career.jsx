@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import PageHeader from "../components/PageHeader"
 import IconCard from "../components/CareersIconCard"
 import { JoinUsButton } from "../components/Button"
