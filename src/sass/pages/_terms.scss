@@ -1,0 +1,11 @@
+.container-terms {
+    width: 100%;
+
+    .content {
+        @include contentBaseStyles;
+
+        .paragraph {
+            margin-bottom: 2rem;
+        }
+    }
+}

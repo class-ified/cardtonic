@@ -62,15 +62,44 @@
         }
 
         .havefun-section {
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
+            text-align: right;
+            padding-top: 2rem;
 
+            @include breakpoint(tablet-sm) {
+                text-align: left;
+                padding: 5rem 0;
+            }
+
+            .heading {
+                margin-bottom: 1.5rem;
+
+                @include breakpoint(tablet-sm) {
+                    margin-bottom: 1.2rem;
+                }
+            }
+            
             .text {
-                text-align: right;
+                display: flex;
+                flex-direction: row-reverse;
 
-                .heading {
-                    margin-bottom: 2rem;
+                @include breakpoint(tablet-sm) {
+                    flex-direction: column;
+                }
+                
+
+                .details {
+
+                    @include breakpoint(tablet-sm) {
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                a {
+                    margin-right: 4rem;
+
+                    @include breakpoint(tablet-sm) {
+                        margin-right: 0;
+                    }
                 }
             }
         }

@@ -12,6 +12,7 @@ import Register from "./pages/dashboard/Register"
 import Career from "./pages/Career";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Terms from "./pages/Terms";
 
 // import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -36,6 +37,10 @@ function App() {
 
 					<Route exact path="/contact-us">
 						<ContactUs/>
+					</Route>
+
+					<Route exact path="/terms">
+						<Terms/>
 					</Route>
 
 					<Route exact path="/dashboard/signin">

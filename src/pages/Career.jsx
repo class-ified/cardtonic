@@ -63,17 +63,18 @@ const Career = () => {
                 </div>
                 
                 <div className="havefun-section">
-                    <div className="text">
-                        <div className="heading">
-                            <h1 className="text-kindabig text-vbold text-blue">Let’s Have Fun Together.</h1>
-                        </div>
+                    <div className="heading">
+                        <h1 className="text-kindabig text-vbold text-blue">Let’s Have Fun Together.</h1>
+                    </div>
 
+                    <div className="text">
                         <div className="details">
                             <h3 className="text-blue text-regular text-small">A world where anyone can belong anywhere starts with a workplace where you feel welcomed and can contribute your best work. Cardtonic welcomes candidates and offers opportunities to create a community everyone loves to see.</h3>
                         </div>
+
+                        <JoinUsButton buttonColor="button-yellow" text="Apply Now" />
                     </div>
     
-                    <JoinUsButton buttonColor="button-yellow" text="Apply Now" />
                 </div>
             </div>
         </main>
