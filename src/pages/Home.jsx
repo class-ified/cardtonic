@@ -3,7 +3,8 @@ import image from "../assets/images/section-sell-image.png";
 import instantPaymentIcon from "../assets/images/instant-payment-icon.svg";
 import crossPlatformIcon from "../assets/images/cross-platform-icon.svg";
 import trustedIcon from "../assets/images/trusted-icon.svg";
-import downladSectionImage from '../assets/images/download-section-image.png'
+import downloadSectionImage from '../assets/images/download-section-image.png'
+import downloadSectionImageMobile from '../assets/images/download-section-image-mobile.png'
 import googlePlay from '../assets/images/googleplay.svg'
 import appStore from '../assets/images/appstore.svg'
 import naij from "../assets/images/naij-logo.png"
@@ -42,7 +43,7 @@ const Home = () => {
 						<span className="tall-line line"></span>
 
 						<div className="details">
-							<h3 className="text-regular text-small text-blue">
+							<h3 className="text-light">
 								Exchange your gift cards at amazing rates in
 								split seconds.
 							</h3>
@@ -153,7 +154,8 @@ const Home = () => {
                             </a>
                         </div>
                         <div className="image-box">
-                            <img src={downladSectionImage} alt="phones" />
+							<img className="download-image-1" src={downloadSectionImage} alt="phones" />
+							<img className="download-image-2" src={downloadSectionImageMobile} alt="phones" />
                         </div>
                     </div>
                 </div>
@@ -184,12 +186,12 @@ const Home = () => {
                         {logos.map((logo) => (
                             <img src={logo} className='logo' alt="logo" />
                         ))}
-                    </div>    
+                    </div>
 
-                    <span className="wide-line"></span>      
+                    <span className="wide-line"></span>
 
                     <div className="impressions">
-                        <a className='impressions-link' href="#"><h3 className="text-small text-green text-regular">Click here to view our impressions.</h3></a>          
+                        <h3 className="text-small text-green text-regular">Click logo above to view our impressions.</h3>        
                     </div>
                 </div>
 			</div>

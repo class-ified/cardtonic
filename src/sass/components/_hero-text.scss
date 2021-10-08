@@ -1,53 +1,54 @@
 .section-hero-text {
+	position: relative;
 
-    h1 {
-        position: relative;
+	@media only screen and (max-width: 1100px) {
+		font-size: 45px;
+	}
+	@media only screen and (max-width: 860px) {
+		font-size: 40px;
+	}
+	@include breakpoint(tablet-sm) {
+		line-height: 1;
+	}
+	@include breakpoint(mobile-lg) {
+		font-size: 35px;
+	}
 
-        @media only screen and (max-width: 1100px) {
-            font-size: 45px;
-        }
-        @media only screen and (max-width: 860px) {
-            font-size: 40px;
-        }
-        @media only screen and (max-width: 595px) {
-            line-height: 1;
-        }
-        @include breakpoint(mobile-lg) {
-            font-size: 35px;
-        }
+	&::before {
+		display: none;
+		content: url(../../assets/images/exchange-section-line-svg-mobile.svg);
+		position: absolute;
+		bottom: -23px;
+		// left: 0;
+		// z-index: -1;
 
-        &::before {
-            display: none;
-            content: url(../../assets/images/sell-section-line-svg-mobile.svg);
-            position: absolute;
-            bottom: -23px;
-            // left: 0;
-            z-index: -1;
+		@include breakpoint(tablet-sm) {
+			display: unset;
+			// bottom: -35%;
+		}
+	}
+
+    @include breakpoint(tablet-sm) {
+        margin-bottom: 4rem;
+    }
+
+	.word {
+		display: inline-block;
+		position: relative;
+		color: $color-blue;
+		z-index: 1;
+
+		&::before {
+			// content: url(../../assets/images/exchange-section-line-svg.svg);
+			position: absolute;
+			bottom: -23px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: -1;
 
             @include breakpoint(tablet-sm) {
-                display: unset;
-                bottom: -35%;
+                display: none;
             }
-
-            @media only screen and (max-width:595px) {
-                bottom: -17px;
-            }
-        }
-    }
-
-    .word {
-        display: inline-block;
-        position: relative;
-        color: $color-blue;
-        z-index: 1;
-
-        &::before {
-            // content: url(../../assets/images/exchange-section-line-svg.svg);
-            position: absolute;
-            bottom: -23px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -1;
-        }
-    }
+		}
+	}
 }

@@ -14,7 +14,7 @@ const Footer = () => {
 							<img src={footerLogo} alt="logo" />
 						</Link>
 
-						<h3 className="text-small text-regular text-white">
+						<h3 className="text-xs text-regular text-white">
 							Cardtonic is a modern gift card exchange platform
 							available on the web, iOS, and Android. On here, we
 							take pride in customers’ satisfaction.
