@@ -12,6 +12,14 @@
     overflow: hidden;
     transition: background-color 1s ease-out;
 
+    @include breakpoint(tablet-sm) {
+        width: 60%;
+        margin: 0 auto 2rem auto !important;
+    }
+    @include breakpoint(mobile-lg) {
+        width: 100%;
+    }
+
     &::before,
     &::after {
         --size: 12rem;  
@@ -32,12 +40,20 @@
         right: 10%;
         transform: translate(80%, -80%);
         transition: transform .4s ease-out .2s;
+
+        @include breakpoint(mobile-lg) {
+            right: 5%;
+        }
     }
     &::after {
         bottom: 0;
         left: 15%;
         transform: translate(-80%, 80%);
         transition: transform .4s ease-out .1s;
+
+        @include breakpoint(mobile-lg) {
+            left: 10%;
+        }
     }
 
     &:hover {
@@ -50,6 +66,7 @@
         transform: translate(40%, -40%);
     }
 
+
     img {
         margin-bottom: .8rem;
     }
@@ -57,11 +74,19 @@
         color: $color-blue-2;
         margin-bottom: .5rem;
         transition: color .5s ease-out;
+
+        @include breakpoint(mobile-lg) {
+            font-size: 16px;
+        }
     }
     &-text {
         color: $color-grey;
         opacity: .7;
         transition: color .5s ease-out;
+
+        @include breakpoint(mobile-lg) {
+            font-size: 14px;
+        }
     }
 
     &:hover > .card {
@@ -74,14 +99,51 @@
         }
     }
 
+    &-1-box {
+
+        a {
+            @include breakpoint(tablet-sm) {
+                display: none !important;
+            }
+
+        }
+    }
+
 
     &-1 {
         margin-bottom: 1.2rem;
+        background-color: $color-blue-dark;    
+
+        @include breakpoint(tablet-sm) {
+            margin-bottom: unset;
+        }
+
+        &::after {
+            transform: translate(-30%, 30%);
+        }
+        &::before {
+            transform: translate(40%, -40%);
+        }
+
+        .card-heading {
+            color: $color-white;
+        }
+        .card-text {
+            color: $color-white;
+        }
     }
     &-2 {
         margin-top: calc(var(--size)/2.8);
+
+        @include breakpoint(tablet-sm) {
+            margin-top: unset;
+        }
     }
     &-3 {
         margin-top: var(--size);
+
+        @include breakpoint(tablet-sm) {
+            margin-top: unset;
+        }
     }
 }

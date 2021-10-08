@@ -1,5 +1,40 @@
 .section-hero-text {
 
+    h1 {
+        position: relative;
+
+        @media only screen and (max-width: 1100px) {
+            font-size: 45px;
+        }
+        @media only screen and (max-width: 860px) {
+            font-size: 40px;
+        }
+        @media only screen and (max-width: 595px) {
+            line-height: 1;
+        }
+        @include breakpoint(mobile-lg) {
+            font-size: 35px;
+        }
+
+        &::before {
+            display: none;
+            content: url(../../assets/images/sell-section-line-svg-mobile.svg);
+            position: absolute;
+            bottom: -23px;
+            // left: 0;
+            z-index: -1;
+
+            @include breakpoint(tablet-sm) {
+                display: unset;
+                bottom: -35%;
+            }
+
+            @media only screen and (max-width:595px) {
+                bottom: -17px;
+            }
+        }
+    }
+
     .word {
         display: inline-block;
         position: relative;

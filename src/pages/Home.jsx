@@ -38,9 +38,11 @@ const Home = () => {
 								for Naira
 							</h1>
 						</div>
+
 						<span className="tall-line line"></span>
+
 						<div className="details">
-							<h3 className="text-light text-small text-blue">
+							<h3 className="text-regular text-small text-blue">
 								Exchange your gift cards at amazing rates in
 								split seconds.
 							</h3>

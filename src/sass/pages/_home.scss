@@ -14,21 +14,73 @@
 
 		&__sell {
 			&-content {
+				@include breakpoint(tablet-sm) {
+					padding-top: 2.5rem;
+				}
+
 				.hero-box {
 					margin-top: 12%;
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
 					height: 12rem;
-					// background-color: rebeccapurple;
+					
+					@include breakpoint(tablet-sm) {
+						height: unset;
+						flex-direction: column;
+						width: 90%;
+					}
+					@media only screen and (max-width:595px) {
+						width: 100%;
+					}
 
 					.header {
 						width: 45%;
 						// margin-left: 5rem;
 						// background-color: red;
 
+						@include breakpoint(tablet-sm) {
+							width: 100%;
+							text-align: center;
+						}
+						@media only screen and (max-width:595px) {
+							padding-left: 2rem;
+							text-align: left;
+						}
+
 						h1 {
-							// width: 80%;
+							position: relative;
+
+							@media only screen and (max-width: 1100px) {
+								font-size: 45px;
+							}
+							@media only screen and (max-width: 860px) {
+								font-size: 40px;
+							}
+							@media only screen and (max-width: 595px) {
+								line-height: 1;
+							}
+							@include breakpoint(mobile-lg) {
+								font-size: 35px;
+							}
+
+							&::before {
+								display: none;
+								content: url(../../assets/images/sell-section-line-svg-mobile.svg);
+								position: absolute;
+								bottom: -23px;
+								// left: 0;
+								z-index: -1;
+
+								@include breakpoint(tablet-sm) {
+									display: unset;
+									bottom: -35%;
+								}
+
+								@media only screen and (max-width:595px) {
+									bottom: -17px;
+								}
+							}
 
 							.sell-word {
 								display: inline-block;
@@ -46,6 +98,23 @@
 									background-color: #f9f9f9;
 									z-index: -1;
 									border-radius: 50%;
+
+									@include breakpoint(tablet-sm) {
+										z-index: -2;
+									}
+									@media only screen and (max-width: 860px) {
+										--size: 8rem;
+									}
+									@media only screen and (max-width: 595px) {
+										--size: 10rem;
+										top: 85%;
+										right: 0;
+									}
+									@include breakpoint(mobile-lg) {
+										--size: 11rem;
+										top: 110%;
+										right: -25%;
+									}
 								}
 							}
 
@@ -61,6 +130,14 @@
 									left: 50%;
 									transform: translateX(-50%);
 									z-index: -1;
+
+									@media only screen and (max-width: 860px) {
+										content: url(../../assets/images/sell-section-line-svg-mobile.svg);
+										bottom: -18px;
+									}
+									@include breakpoint(tablet-sm) {
+										display: none;
+									}
 								}
 							}
 						}
@@ -68,11 +145,30 @@
 
 					.line {
 						background-color: $color-black;
+
+						@include breakpoint(tablet-sm) {
+							display: none;
+						}
 					}
 
 					.details {
 						width: 40%;
 						// background-color: red;
+
+						@include breakpoint(tablet-sm) {
+							width: 100%;
+							text-align: center;
+							margin-top: 3rem;
+							margin-bottom: 1rem;
+
+							h3 {
+								font-size: 18px;
+							}
+						}
+						@media only screen and (max-width:595px) {
+							text-align: left;
+							width: 90%;
+						}
 					}
 				}
 
@@ -80,10 +176,18 @@
 					width: 100%;
 					// background-color: red;
 
+					@include breakpoint(tablet-sm) {
+						margin-bottom: 2rem;
+					}
+
 					img {
 						display: block;
 						margin: 0 auto;
 						width: 80%;
+
+						@include breakpoint(tablet-sm) {
+							width: 100%;
+						}
 					}
 				}
 
@@ -94,8 +198,17 @@
 					margin-top: -8rem;
 					padding-bottom: 10%;
 
+					@include breakpoint(tablet-sm) {
+						margin-top: unset;
+						flex-direction: column;
+					}
+
 					& > *:not(:last-child) {
 						margin-right: 2.5rem;
+
+						@include breakpoint(tablet-sm) {
+							margin-right: unset;
+						}
 					}
 				}
 			}
@@ -112,17 +225,34 @@
 					align-items: center;
 					margin-bottom: 5%;
 
+					@include breakpoint(tablet-sm) {
+						flex-direction: column;
+					}
+
 					.header {
 						width: 40%;
 
+						@include breakpoint(tablet-sm) {
+							width: 100%;
+						}
+
 						.word::before {
 							content: url(../../assets/images/exchange-section-line-svg.svg);
+
+							@include breakpoint(tablet-sm) {
+								display: none;
+							}
 						}
+
 					}
 
 					.line {
 						background-color: $color-blue-dark;
 						height: 18rem;
+
+						@include breakpoint(tablet-sm) {
+							display: none;
+						}
 					}
 
 					.details {
@@ -133,6 +263,10 @@
 
 						& > *:not(:last-child) {
 							margin-bottom: 5%;
+						}
+
+						@include breakpoint(tablet-sm) {
+							width: 100%;
 						}
 					}
 				}
