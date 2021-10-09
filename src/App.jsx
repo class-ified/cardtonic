@@ -16,7 +16,33 @@ import Terms from "./pages/Terms";
 
 // import { Swiper, SwiperSlide } from "swiper/react";
 
-function App() {
+const GetStartedRoutes = () => {
+	return (
+		<>
+			<Switch>
+				<Route exact path="/career">
+					<Career/>
+				</Route>
+
+				<Route exact path="/rate-calculator">
+					<RateCalculator/>
+				</Route>
+
+				<Route exact path="/contact-us">
+					<ContactUs/>
+				</Route>
+
+				<Route exact path="/terms">
+					<Terms/>
+				</Route>
+			</Switch>
+
+			<GetStartedNow />
+		</>
+	)
+}
+
+const App = () => {
 	return (
 		<div className="app">
 			<Router> 
@@ -27,21 +53,7 @@ function App() {
 						<Home/>
 					</Route>
 
-					<Route exact path="/career">
-						<Career/>
-					</Route>
-
-					<Route exact path="/rate-calculator">
-						<RateCalculator/>
-					</Route>
-
-					<Route exact path="/contact-us">
-						<ContactUs/>
-					</Route>
-
-					<Route exact path="/terms">
-						<Terms/>
-					</Route>
+					<Route component={GetStartedRoutes}/>
 
 					<Route exact path="/dashboard/signin">
 						<SignIn/>
@@ -51,8 +63,6 @@ function App() {
 						<Register/>
 					</Route>
 				</Switch>
-
-				<GetStartedNow />
 
 				<Footer />
 			</Router>

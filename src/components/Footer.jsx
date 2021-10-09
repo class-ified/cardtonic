@@ -55,7 +55,7 @@ const Footer = () => {
 
 				<div className="footer__content-bottom">
 					<h3 className="text-white text-small text-regular">
-						©Copyright 2021. Cardtonic Technologies LTD. All Rights
+						©Copyright 2021. Cardtonic. All Rights
 						Reserved.
 					</h3>
 				</div>
