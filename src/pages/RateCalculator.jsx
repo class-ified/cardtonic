@@ -4,7 +4,17 @@ import { BlackButton } from "../components/Button"
 import { Link } from "react-router-dom"
 import GiftcardInfoCard from "../components/GiftcardInfoCard"
 
+import { useEffect } from "react"
+
 const RateCalculator = () => {
+
+    useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	}, []);
+    
     return (
         <main className="container-ratecalculator">
             <div className="content">

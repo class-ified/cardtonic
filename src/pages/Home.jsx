@@ -19,10 +19,19 @@ import { RegisterButton } from "../components/Button";
 import HeroText from "../components/SectionHeroText";
 import SwiperComponent from "../components/HomeSwiper";
 
+import { useEffect } from "react";
+
 
 
 const Home = () => {
     const logos = [naij, naija, pulse, punch, today, vanguard]
+
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	}, []);
 
 	return (
 		<main className="container-home">

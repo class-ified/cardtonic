@@ -11,7 +11,17 @@ import learningIxon from "../assets/images/learning-icon.svg"
 import healthyIcon from "../assets/images/healthy-icon.svg"
 import friendlyIcon from "../assets/images/friendly-icon.svg"
 
+import { useEffect } from "react"
+
 const Career = () => {
+    useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	}, []);
+
+
     return (
         <main className="container-career">
             <div className="content">

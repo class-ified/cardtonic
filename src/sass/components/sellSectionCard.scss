@@ -1,8 +1,8 @@
 .card {
     --size: 20rem;
     --border-radius: 2rem;
-    min-height: var(--size);
-    width: var(--size);
+    min-height: 22.5rem;
+    width: 21.5rem;
     background-color: $color-white;
     border-radius: var(--border-radius);
     padding: 2rem;
@@ -11,6 +11,7 @@
     box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     transition: background-color 1s ease-out;
+    line-height: 18px;
 
     @include breakpoint(tablet-sm) {
         width: 60%;

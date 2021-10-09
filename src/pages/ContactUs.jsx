@@ -2,7 +2,17 @@
 import { BlackButton } from "../components/Button"
 import PageHeader from "../components/PageHeader"
 
+import { useEffect } from "react";
+
 const ContactUs = () => {
+
+    useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	}, []);
+
     return (
         <main className="container-contactus">
             <div className="content">
@@ -13,10 +23,10 @@ const ContactUs = () => {
                 </div>
 
                 <form action="#" className="contact-form">
-                    <input className="form-input" type="text" name="name" id="name" placeholder="What's your name?" required/>
-                    <input className="form-input" type="email" name="email" id="email" placeholder="Drop your Email" required/>
-                    <input className="form-input" type="text" name="message-subject" id="message-subject" placeholder="Message Subject" required/>
-                    <textarea className="form-input form-textarea" name="message" id="message" placeholder="Type your message here in details..." style={{resize: 'none'}} required>
+                    <input className="form-input text-small" type="text" name="name" id="name" placeholder="What's your name?" required/>
+                    <input className="form-input text-small" type="email" name="email" id="email" placeholder="Drop your Email" required/>
+                    <input className="form-input text-small" type="text" name="message-subject" id="message-subject" placeholder="Message Subject" required/>
+                    <textarea className="form-input text-small form-textarea" name="message" id="message" placeholder="Type your message here in details..." style={{resize: 'none'}} required>
                     </textarea>
 
                     <div className="links">

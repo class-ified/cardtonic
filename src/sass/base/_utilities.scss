@@ -34,6 +34,24 @@
 	);
 }
 
+.text-24 {
+	@include fluid-type(
+		$min_width_24,
+		$max_width_24,
+		$min_font_24,
+		$max_font_24
+	);
+}
+
+.text-20 {
+	@include fluid-type(
+		$min_width_20,
+		$max_width_20,
+		$min_font_20,
+		$max_font_20
+	);
+}
+
 .text-kindabig {
 	@include fluid-type(
 		$min_width_30,
