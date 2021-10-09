@@ -38,6 +38,9 @@ input {
     border: none;
     background-color: transparent;
     font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     &::placeholder {
         color: inherit;
