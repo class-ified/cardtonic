@@ -7,12 +7,10 @@ import GetStartedNow from "./components/GetStartedNow";
 import Home from "./pages/Home"
 import RateCalculator from "./pages/RateCalculator";
 import ContactUs from "./pages/ContactUs";
-import SignIn from "./pages/dashboard/SignIn"
-import Register from "./pages/dashboard/Register"
 import Career from "./pages/Career";
+import Terms from "./pages/Terms";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Terms from "./pages/Terms";
 
 // import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -42,10 +40,11 @@ const GetStartedRoutes = () => {
 	)
 }
 
+
 const App = () => {
 	return (
 		<div className="app">
-			<Router> 
+			<Router>
 				<Navigation/>
 
 				<Switch>
@@ -54,14 +53,6 @@ const App = () => {
 					</Route>
 
 					<Route component={GetStartedRoutes}/>
-
-					<Route exact path="/dashboard/signin">
-						<SignIn/>
-					</Route>
-
-					<Route exact path="/dashboard/register">
-						<Register/>
-					</Route>
 				</Switch>
 
 				<Footer />
